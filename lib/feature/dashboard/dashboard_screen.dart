@@ -14,11 +14,19 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff121212),
-      body: Column(
+      backgroundColor: const Color(0xff121212),
+      body: Row(
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SideBarWidget(),
+          const Expanded(
+            flex: 1,
+            child: SideBarWidget(),
+          ),
+          Expanded(
+            flex: 4,
+            child: Container(),
+          )
         ],
       ),
     );
