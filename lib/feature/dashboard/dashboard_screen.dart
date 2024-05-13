@@ -25,7 +25,19 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
           ),
           Expanded(
             flex: 4,
-            child: Container(),
+            child: Container(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const AppBarWidget(),
+                  Expanded(
+                    child: Container(
+                      color: const Color(0xff121212),
+                    ),
+                  ),
+              ],),
+            ),
           )
         ],
       ),

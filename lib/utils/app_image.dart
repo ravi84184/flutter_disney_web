@@ -6,4 +6,6 @@ class AppImage {
   static String icPlaylists = "assets/ic_playlists.png";
   static String icTopRated = "assets/ic_top_rated.png";
   static String icWatchlist = "assets/ic_watchlist.png";
+  static String icNotification = "assets/ic_notification.png";
+  static String icSearch = "assets/ic_search.png";  
 }
