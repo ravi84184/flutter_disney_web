@@ -135,12 +135,8 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
         borderRadius: BorderRadius.circular(10),
         child: Stack(
           children: [
-            Image.asset(
-              AppImage.move1,
-              height: 250,
-              width: 200,
-              fit: BoxFit.cover,
-            ),
+            Image.asset(AppImage.move1,
+                height: 250, width: 200, fit: BoxFit.cover),
             Container(
               height: 250,
               width: 200,
