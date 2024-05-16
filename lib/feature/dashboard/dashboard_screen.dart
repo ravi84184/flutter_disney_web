@@ -33,16 +33,68 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                 const AppBarWidget(),
                 Expanded(
                   child: Container(
-                    // color: const Color(0xff121212),
-                    color: Colors.white,
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
+                    color: const Color(0xff121212),
+                    // color: Colors.white,
+                    child: ListView(
+                      shrinkWrap: true,
+                      // mainAxisSize: MainAxisSize.min,
                       children: [
                         Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Expanded(child: Container()),
-                            Expanded(child: Container()),
+                            Expanded(
+                              flex: 3,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: Stack(
+                                  children: [
+                                    Container(
+                                      color: Colors.white,
+                                      height: 350,
+                                      width: double.infinity,
+                                      child: Image.asset(
+                                        AppImage.move1,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                    const Positioned(
+                                      top: 10,
+                                      left: 20,
+                                      child: Text(
+                                        "Avenger",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 35,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                    Positioned(
+                                      bottom: 10,
+                                      right: 10,
+                                      child: ElevatedButton(
+                                        onPressed: () {},
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor:
+                                              const Color(0xffF97642),
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 30, vertical: 10),
+                                        ),
+                                        child: const Text(
+                                          'Watch Now',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Container(),
+                            ),
                           ],
                         ),
                         SingleChildScrollView(
@@ -84,7 +136,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
         child: Stack(
           children: [
             Image.asset(
-              AppImage.mov4,
+              AppImage.move1,
               height: 250,
               width: 200,
               fit: BoxFit.cover,
@@ -127,7 +179,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                         fontWeight: FontWeight.bold,
                         color: const Color(0xffF9F9F9).withOpacity(0.7)),
                   ),
-                  Icon(
+                  const Icon(
                     Icons.star,
                     color: Colors.white,
                   ),

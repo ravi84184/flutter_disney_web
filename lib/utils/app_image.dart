@@ -9,6 +9,7 @@ class AppImage {
   static String icNotification = "assets/ic_notification.png";
   static String icSearch = "assets/ic_search.png";
 
+  static String move1 = "assets/move1.jpg";
   static String mov1 = "assets/1.jpg";
   static String mov2 = "assets/2.jpg";
   static String mov3 = "assets/3.jpg";
